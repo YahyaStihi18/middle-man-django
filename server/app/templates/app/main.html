@@ -1,0 +1,64 @@
+{% load  static %}
+
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{%static 'app/css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{%static 'app/css/mobile.css' %}" media="screen and (max-width : 568px)">
+    <script type="text/javascript" src="{%static 'app/js/mobile.js' %}"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="background-color:whitesmoke;">
+  <div id="header"><br>
+		<ul id="navigation">
+			<li>
+				<a href="{% url 'index' %}">Home</a>
+			</li>
+			<li >
+				<a href="{% url 'products' %}">Shop</a>
+			</li>
+			<li>
+				<a href="{% url 'gallery'%}">gallery</a>
+			</li>
+			<li>
+				<a href="{% url 'blog' %}">blog</a>
+			</li>
+			<li>
+				<a href="{% url 'contact'%}" style="float: right; color: orange; margin-right: 10px;">contact</a>
+      </li>
+      <li>
+			</li>
+		</ul>
+	</div>
+{% block content%}
+{% endblock content %}
+
+<div id="footer">
+  <div>
+    <p>&copy; 2020 by Yahya-ST. All rights reserved.</p>
+    <ul>
+      <li>
+        <a href="#" id="twitter">twitter</a>
+      </li>
+      <li>
+        <a href="#" id="facebook">facebook</a>
+      </li>
+      <li>
+        <a href="#" id="googleplus">googleplus</a>
+      </li>
+      <li>
+        <a href="#" id="pinterest">pinterest</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

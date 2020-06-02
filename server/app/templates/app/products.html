@@ -1,0 +1,26 @@
+{% extends 'app/main.html' %}
+{% block content%}
+
+<title>product</title>
+
+<br>
+{% for product in products%}
+<div class="d-inline-flex" style="margin:12px;">
+
+    <div class="card" style="width: 18rem; margin: 10px; box-shadow: 1px 6px 10px gray;">
+    <img class="img-thumbnail" src="{{product.image.url}}" alt="Card image cap" style=" height:220px;">
+
+    <div class="card-body">
+      <small style="float: right;">KLM:{{product.klm}}</small>
+      <h5 class="card-title">{{product.name}}
+      <p class="card-text">{{product.price|floatformat:2}}$</p></h5>
+      <hr>  
+      <a type="button" class="btn btn-outline-success" style="width: 10rem;" href="{% url 'detail' product.id %}">View</a>
+      <small style="float: right;">Status: {{product.status}}/10</small>
+    </div>
+    </div>
+</div>
+{%endfor%}
+
+
+{% endblock content %}
